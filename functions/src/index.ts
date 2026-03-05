@@ -17,6 +17,6 @@ app.get('/api/products', productsHandler);
 app.post('/api/generate-affiliate-link', generateAffiliateLinkHandler);
 
 export const api = onRequest(
-  { region: 'asia-south1', memory: '512MiB', timeoutSeconds: 60 },
+  { region: 'asia-south1', memory: '512MiB', timeoutSeconds: 60, invoker: 'public' },
   app,
 );
