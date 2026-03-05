@@ -36,7 +36,7 @@ export async function parseSearchQuery(query: string): Promise<ParsedSearchQuery
   const openai = getClient();
 
   const response = await openai.chat.completions.create({
-    model: 'gpt-4o-mini',
+    model: 'gpt-5-nano',
     messages: [
       { role: 'system', content: SYSTEM_PROMPT },
       { role: 'user', content: query },
