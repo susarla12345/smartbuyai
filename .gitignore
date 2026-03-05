@@ -1,0 +1,44 @@
+# Dependencies
+node_modules/
+
+# Build output
+frontend/dist/
+functions/lib/
+public/assets/
+public/index.html
+
+# Environment
+.env
+.env.local
+functions/.env
+
+# Firebase
+.firebase/
+firebase-debug.log*
+firestore-debug.log*
+ui-debug.log*
+
+# Logs
+*.log
+npm-debug.log*
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Editor
+.vscode/
+.idea/
+
+# Runtime
+pids
+*.pid
+*.seed
+*.pid.lock
+
+# Coverage
+coverage/
+.nyc_output/
+
+# dataconnect
+.dataconnect

@@ -1,0 +1,22 @@
+rules_version = '2';
+
+service cloud.firestore {
+  match /databases/{database}/documents {
+    // Products are read-only publicly
+    match /products/{productId} {
+      allow read: if true;
+      allow write: if false;
+    }
+
+    // Prices are read-only publicly
+    match /prices/{priceId} {
+      allow read: if true;
+      allow write: if false;
+    }
+
+    // Search cache is internal — only functions can read/write
+    match /search_cache/{docId} {
+      allow read, write: if false;
+    }
+  }
+}

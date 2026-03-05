@@ -1,0 +1,17 @@
+{
+  "name": "smartbuyai",
+  "version": "1.0.0",
+  "private": true,
+  "workspaces": [
+    "shared",
+    "frontend",
+    "functions"
+  ],
+  "scripts": {
+    "dev": "npm run dev --workspace=frontend",
+    "build": "npm run build --workspace=frontend",
+    "build:functions": "npm run build --workspace=functions",
+    "deploy": "npm run build && firebase deploy",
+    "emulators": "firebase emulators:start"
+  }
+}
